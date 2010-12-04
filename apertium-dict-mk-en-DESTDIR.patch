@@ -1,0 +1,16 @@
+--- apertium-mk-en-0.1.0/Makefile.am.orig	2010-09-19 15:54:43.000000000 +0200
++++ apertium-mk-en-0.1.0/Makefile.am	2010-12-04 15:41:10.434118583 +0100
+@@ -100,9 +100,9 @@
+ 		  
+ install-data-local:
+ 	apertium-gen-modes modes.xml apertium-$(PREFIX1)
+-	$(INSTALL_DATA) $(PREFIX1).mode $(apertium_mk_enmodesdir)
+-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(apertium_mk_endir)
+-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t2x $(apertium_mk_endir)
+-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(apertium_mk_endir)
++	$(INSTALL_DATA) $(PREFIX1).mode $(DESTDIR)$(apertium_mk_enmodesdir)
++	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(DESTDIR)$(apertium_mk_endir)
++	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t2x $(DESTDIR)$(apertium_mk_endir)
++	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(DESTDIR)$(apertium_mk_endir)
+ 
+ CLEANFILES = -r $(TARGETS_COMMON) 
