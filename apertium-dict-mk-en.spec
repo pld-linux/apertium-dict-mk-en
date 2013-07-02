@@ -2,14 +2,13 @@ Summary:	Macedonian-English language pair for Apertium
 Summary(pl.UTF-8):	Para języków macedoński-angielski dla Apertium
 %define	lpair	mk-en
 Name:		apertium-dict-%{lpair}
-Version:	0.1.0
+Version:	0.1.1
 Release:	1
 License:	GPL v3
 Group:		Applications/Text
 Source0:	http://downloads.sourceforge.net/apertium/apertium-%{lpair}-%{version}.tar.gz
-# Source0-md5:	622842068b69a91b946f7581c849b06c
+# Source0-md5:	46bd7cfcb16afeea7a731b574ae439d8
 Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-missing.patch
 URL:		http://www.apertium.org/
 BuildRequires:	apertium-devel >= 3.2.0
 BuildRequires:	autoconf >= 2.52
@@ -34,7 +33,6 @@ oznaczania części mowy w obu językach.
 %prep
 %setup -q -n apertium-%{lpair}-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__aclocal}
